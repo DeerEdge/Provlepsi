@@ -1,5 +1,5 @@
 # The Purpose
-Provlepsi allows business to forecast of Food sales for various businesses to allow them to prepare for customer demand.
+Provlepsi allows business to forecast of food sales for various businesses to allow them to prepare for customer demand.
 
 # Data Source
 We got the training.csv file from: https://www.kaggle.com/competitions/demand-forecasting-kernels-only/data. 
