@@ -45,6 +45,7 @@ if st.sidebar.button('Predict with Selected .TXT File'):
 
         grand_avg = data.sales.mean()
         st.write(f"The grand average of sales in this dataset is {grand_avg:.4f}")
+        st.write("The Data shows different stores, items, amount of sales, day, week, month, and year.")
 
     with st.spinner("Loading Yearly Change Graphs:"):
         st.header('**Sales Changes by Year**')
@@ -65,6 +66,7 @@ if st.sidebar.button('Predict with Selected .TXT File'):
         plt.xlabel("Year")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("Here, the graph shows the relative sale pattern of each item and store on a yearly basis.")
 
     with st.spinner("Loading Monthly Change Graphs:"):
         st.header('**Sales Changes by Month**')
@@ -85,6 +87,7 @@ if st.sidebar.button('Predict with Selected .TXT File'):
         plt.xlabel("Month")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("The graph shows the relative sale pattern of each item and store on a monthly basis.")
 
     with st.spinner("Loading Weekly Change (Day Basis) Graphs:"):
         st.header('**Sales Changes by Week**')
@@ -105,6 +108,7 @@ if st.sidebar.button('Predict with Selected .TXT File'):
         plt.xlabel("Day of Week")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("The graph shows the relative sale pattern of each item and store on a daily basis.")
 
     with st.spinner("Loading Item & Store Relationships:"):
         st.header('**Item & Stores Correlation Analysis**')
@@ -123,6 +127,7 @@ if st.sidebar.button('Predict with Selected .TXT File'):
         plt.xlabel("Item")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("The graph shows the relative sale pattern based on the relation of the item and store")
 
     with st.spinner("Loading Item & Store Table:"):
         st.header('**Item & Store Output Table**')
@@ -151,6 +156,7 @@ if st.sidebar.button('Predict with Selected .TXT File'):
         plt.ylabel("Relative Sales")
         plt.xlabel("Year")
         st.pyplot(plt)
+        st.write("The graph presents a future forecast based on previous years.")
 
 elif st.sidebar.button('Predict with Example Data'):
     with st.spinner("Loading Data"):
