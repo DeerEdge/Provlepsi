@@ -171,6 +171,7 @@ elif st.sidebar.button('Predict with Example Data'):
 
         grand_avg = data.sales.mean()
         st.write(f"The grand average of sales in this dataset is {grand_avg:.4f}")
+        st.write("The Data shows different stores, items, amount of sales, day, week, month, and year.")
 
     with st.spinner("Loading Yearly Change Graphs:"):
         st.header('**Sales Changes by Year**')
@@ -191,6 +192,7 @@ elif st.sidebar.button('Predict with Example Data'):
         plt.xlabel("Year")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("Here, the graph shows the relative sale pattern of each item and store on a yearly basis.")
 
     with st.spinner("Loading Monthly Change Graphs:"):
         st.header('**Sales Changes by Month**')
@@ -211,6 +213,7 @@ elif st.sidebar.button('Predict with Example Data'):
         plt.xlabel("Month")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("The graph shows the relative sale pattern of each item and store on a monthly basis.")
 
     with st.spinner("Loading Weekly Change (Day Basis) Graphs:"):
         st.header('**Sales Changes by Week**')
@@ -231,6 +234,7 @@ elif st.sidebar.button('Predict with Example Data'):
         plt.xlabel("Day of Week")
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
+        st.write("The graph shows the relative sale pattern of each item and store on a daily basis.")
 
     with st.spinner("Loading Item & Store Relationships:"):
         st.header('**Item & Stores Correlation Analysis**')
@@ -277,5 +281,6 @@ elif st.sidebar.button('Predict with Example Data'):
         plt.ylabel("Relative Sales")
         plt.xlabel("Year")
         st.pyplot(plt)
+        st.write("The graph presents a future forecast based on previous years.")
 else:
     st.info('Upload input data!')
