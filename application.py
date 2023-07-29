@@ -137,14 +137,11 @@ if st.sidebar.button('Predict with Selected .TXT File'):
                                               values='sales', aggfunc=np.mean)
             st.write(store_item_table)
 
-<<<<<<< Updated upstream
             dow_table = pd.pivot_table(data, index='dayofweek', values='sales', aggfunc=np.mean)
             dow_table.sales /= grand_avg
-=======
-        dow_table = pd.pivot_table(data, index='dayofweek', values='sales', aggfunc=np.mean)
-        dow_table.sales /= grand_avg
-        st.write("The spreadsheet presents the average yearly sales of an item in each store.")
->>>>>>> Stashed changes
+            dow_table = pd.pivot_table(data, index='dayofweek', values='sales', aggfunc=np.mean)
+            dow_table.sales /= grand_avg
+            st.write("The spreadsheet presents the average yearly sales of an item in each store.")
 
         with st.spinner("Loading Yearly Sales Growth Prediction:"):
             st.header('**Sales Growth Prediction by Year**')
