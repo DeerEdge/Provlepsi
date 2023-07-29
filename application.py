@@ -13,16 +13,18 @@ def expand_df(df):
     data['dayofweek'] = data.index.dayofweek
     return data
 
-# Page title
+github_url = "https://github.com/DeerEdge/Provlepsi"
+
 st.markdown("""
 # Provlepsi
 
 This app allows business to forecast of Food sales for various businesses to allow them to prepare for customer demand.
 
 **Credits**
-- App built in `Python` + `Streamlit` by Sang Hyun Chun, Vishwa Murugappan, and Dheeraj Vislawath
+- App built in `Python` & `Streamlit` by Sang Hyun Chun, Vishwa Murugappan, and Dheeraj Vislawath
+- Github: [https://github.com/DeerEdge/Provlepsi](https://github.com/DeerEdge/Provlepsi)
 ---
-""")
+""" )
 
 with st.sidebar.header('Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input file", type=['txt'])
