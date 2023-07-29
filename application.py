@@ -44,7 +44,7 @@ if st.sidebar.button('Predict'):
         test = pd.read_csv(f"test.csv", low_memory=False,
                            parse_dates=['date'], index_col=['date'])
 
-        st.header('**Original input data**')
+        st.header('**Original Input Data**')
         data = expand_df(train)
         st.write(data)
 
@@ -52,6 +52,7 @@ if st.sidebar.button('Predict'):
         st.write(f"The grand average of sales in this dataset is {grand_avg:.4f}")
 
     with st.spinner("Loading Yearly Change Graphs:"):
+        st.header('**Sales Changes by Year**')
         agg_year_item = pd.pivot_table(data, index='year', columns='item',
                                        values='sales', aggfunc=np.mean).values
         agg_year_store = pd.pivot_table(data, index='year', columns='store',
@@ -71,6 +72,7 @@ if st.sidebar.button('Predict'):
         st.pyplot(plt)
 
     with st.spinner("Loading Monthly Change Graphs:"):
+        st.header('**Sales Changes by Month**')
         agg_month_item = pd.pivot_table(data, index='month', columns='item',
                                         values='sales', aggfunc=np.mean).values
         agg_month_store = pd.pivot_table(data, index='month', columns='store',
@@ -90,6 +92,7 @@ if st.sidebar.button('Predict'):
         st.pyplot(plt)
 
     with st.spinner("Loading Weekly Change (Day Basis) Graphs:"):
+        st.header('**Sales Changes by Week**')
         agg_dow_item = pd.pivot_table(data, index='dayofweek', columns='item',
                                       values='sales', aggfunc=np.mean).values
         agg_dow_store = pd.pivot_table(data, index='dayofweek', columns='store',
@@ -108,7 +111,8 @@ if st.sidebar.button('Predict'):
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
 
-    with st.spinner("Loading Item & Stores Relationship Graphs:"):
+    with st.spinner("Loading Item & Store Relationships:"):
+        st.header('**Item & Stores Correlation Analysis**')
         agg_store_item = pd.pivot_table(data, index='store', columns='item',
                                         values='sales', aggfunc=np.mean).values
 
@@ -125,7 +129,8 @@ if st.sidebar.button('Predict'):
         plt.ylabel("Relative Sales")
         st.pyplot(plt)
 
-    with st.spinner("Loading Item-Store Table:"):
+    with st.spinner("Loading Item & Store Table:"):
+        st.header('**Item & Store Output Table**')
         store_item_table = pd.pivot_table(data, index='store', columns='item',
                                           values='sales', aggfunc=np.mean)
         st.write(store_item_table)
@@ -133,7 +138,8 @@ if st.sidebar.button('Predict'):
         dow_table = pd.pivot_table(data, index='dayofweek', values='sales', aggfunc=np.mean)
         dow_table.sales /= grand_avg
 
-        # Yearly growth pattern
+    with st.spinner("Loading Yearly Sales Growth Prediction:"):
+        st.header('**Sales Growth Prediction by Year**')
         year_table = pd.pivot_table(data, index='year', values='sales', aggfunc=np.mean)
         year_table /= grand_avg
 
