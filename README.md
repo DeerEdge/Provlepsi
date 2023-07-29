@@ -1,3 +1,6 @@
+# The Purpose
+Provlepsi allows business to forecast of Food sales for various businesses to allow them to prepare for customer demand.
+
 # Deployed Solution
 https://provlepsi.streamlit.app/
 
