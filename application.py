@@ -18,7 +18,7 @@ github_url = "https://github.com/DeerEdge/Provlepsi"
 st.markdown("""
 # Provlepsi
 
-This app allows business to forecast of Food sales for various businesses to allow them to prepare for customer demand.
+Our app allows businesses to forecast food sales for various businesses to allow them to prepare for customer demand.
 
 **Credits**
 - App built in `Python` & `Streamlit` by Sang Hyun Chun, Vishwa Murugappan, and Dheeraj Vislawath
