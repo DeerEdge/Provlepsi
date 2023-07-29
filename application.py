@@ -17,7 +17,7 @@ def expand_df(df):
 github_url = "https://github.com/DeerEdge/Provlepsi"
 
 st.markdown("""
-# Provlepsi
+# Provlepsi: Combating Food Wastage
 
 Our app allows businesses to forecast food sales for various businesses to allow them to prepare for customer demand.
 
