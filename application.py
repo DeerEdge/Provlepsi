@@ -154,7 +154,7 @@ elif st.sidebar.button('Predict with Example Data'):
     with st.spinner("Loading Data"):
         train = pd.read_csv(f"train.csv", low_memory=False,
                             parse_dates=['date'], index_col=['date'])
-        test = pd.read_csv(f"test.csv", low_memory=False,
+        test = pd.read_csv(f"new_test.csv", low_memory=False,
                            parse_dates=['date'], index_col=['date'])
 
         st.header('**Original Input Data**')
