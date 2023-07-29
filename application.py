@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import time
 pd.set_option('display.max_rows', 12)
 
 def expand_df(df):
@@ -159,8 +160,10 @@ if st.sidebar.button('Predict with Selected .TXT File'):
             st.pyplot(plt)
             st.write("The graph presents a future forecast based on previous years.")
     except:
-        st.write("Please enter a valid data file with columns (date,store,item,sales)")
-        
+        st.write("Please enter a valid data file with correct columns (date, store, item, sales).")
+        time.sleep(2)
+        st.experimental_rerun()
+
 elif st.sidebar.button('Predict with Example Data'):
     with st.spinner("Loading Data"):
         train = pd.read_csv(f"train.csv", low_memory=False,
